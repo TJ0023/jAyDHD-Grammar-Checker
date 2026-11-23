@@ -1,0 +1,230 @@
+# id	topic	kind	text	skip_reason
+# Written by Claude after the PDF cases, from general grammar knowledge and fiction prose. 'good' lines must not be flagged.
+1000	their-theyre	bad	Their going to the park later.	
+1001	your-youre	bad	I think your going to love it.	
+1002	its	bad	Its raining outside.	
+1003	its	bad	The dog chased it's tail.	
+1004	there	bad	Put the books over their.	
+1005	there is plural	bad	There is two apples on the table.	
+1006	then/than	bad	He is taller then his brother.	
+1007	who's/whose	bad	Who's coat is this?	
+1008	weather	bad	I can't decide weather to go.	
+1009	advice	bad	She gave me some good advise.	
+1010	effect	bad	This will effect me greatly.	
+1011	should of	bad	He should of called earlier.	
+1012	could of	bad	We could of won the game.	
+1013	don't	bad	She don't like pizza.	
+1014	have	bad	He have a red car.	
+1015	was	bad	They was late again.	
+1016	children is	bad	The children is playing outside.	
+1017	everyone have	bad	Everyone have finished the test.	
+1018	neither	bad	Neither of the boys were ready.	debated or needs meaning; not counted
+1019	he go	bad	He go to school every day.	
+1020	seen	bad	I seen that movie before.	
+1021	has went	bad	She has went home already.	
+1022	have wrote	bad	I have wrote three letters.	
+1023	didn't went	bad	They didn't went to the party.	
+1024	did you saw	bad	Did you saw the game last night?	
+1025	can speaks	bad	He can speaks three languages.	
+1026	to goes	bad	I want to goes home.	
+1027	enjoy to	bad	We enjoy to swim in the lake.	
+1028	forward to see	bad	I'm looking forward to see you.	
+1029	alot	bad	There was alot of people at the market.	
+1030	more smarter	bad	She is more smarter than her sister.	
+1031	most funniest	bad	That was the most funniest show.	
+1032	very unique	bad	He is a very unique person.	
+1033	fewer time	bad	I have fewer time than you.	
+1034	less students	bad	There are less students this year.	
+1035	to much	bad	He has to much homework.	
+1036	double neg	bad	I didn't see nobody there.	
+1037	double neg	bad	She can't find nothing she likes.	
+1038	me and	bad	Me and John went to the store.	
+1039	between you and I	bad	Between you and I, this is a secret.	
+1040	let she	bad	Let she go first.	
+1041	perfect yesterday	bad	It was a long time ago, I have seen him yesterday.	
+1042	suppose to	bad	He is suppose to call me.	
+1043	use to	bad	I use to live in Boston.	
+1044	listen me	bad	Please listen me carefully.	
+1045	good in	bad	She is good in math.	
+1046	in Monday	bad	The meeting is in Monday.	
+1047	arrive to	bad	We arrived to the airport at noon.	
+1048	married with	bad	My brother is married with a doctor.	
+1049	afraid from	bad	He is afraid from spiders.	
+1050	depends of	bad	She depends of her parents.	
+1051	discussed about	bad	They discussed about the plan.	
+1052	interested on	bad	I'm interested on history.	
+1053	different then	bad	This book is different then that one.	
+1054	reason is because	bad	The reason is because he was tired.	
+1055	could care less	bad	I could care less about it.	
+1056	mute point	bad	It is a mute point now.	
+1057	peaked my interest	bad	She peaked my interest.	
+1058	irregardless	bad	Irregardless of the cost, we will go.	
+1059	double neg	bad	He don't know nothing.	
+1060	each of	bad	Each of the players have a locker.	
+1061	one of	bad	One of my friend is a doctor.	
+1062	group	bad	The group of students are leaving.	debated or needs meaning; not counted
+1063	me	bad	My friends and me are going out.	
+1064	your the	bad	Your the best teacher I ever had.	
+1065	i	bad	i went to the store.	
+1066	lowercase	bad	It was cold. we stayed inside.	
+1067	dont	bad	I dont know what to do.	
+1068	seperate	bad	We seperate the colors before washing.	
+1069	recieve	bad	She recieved a letter today.	
+1070	tryed	bad	He tryed to open the door.	
+1071	was	bad	They was talking about the weather.	
+1072	her and I	bad	Her and I went shopping.	debated or needs meaning; not counted
+1073	John and I	bad	The teacher gave the book to John and I.	
+1074	taller of three	bad	He is the taller of the three boys.	debated or needs meaning; not counted
+1075	badly	bad	I feel badly about what happened.	debated or needs meaning; not counted
+1076	runned	bad	She runned to the store.	
+1077	laying	bad	The cat is laying on the couch.	debated or needs meaning; not counted
+1078	data	bad	The data shows that he is right.	debated or needs meaning; not counted
+1079	should have went	bad	I should have went with them.	
+1080	whom	bad	Who did you give the book to? Whom is calling?	debated or needs meaning; not counted
+1081	affect noun	bad	The affect of the storm was huge.	debated or needs meaning; not counted
+1082	its	bad	Its important to be on time.	
+1083	their are	bad	Their are many reasons to stay.	
+1084	prose	good	"I don't know," she said. "Maybe it's nothing."	
+1085	prose	good	"Where are you going?" he asked.	
+1086	prose	good	"Stop!" she cried. "Don't touch that."	
+1087	prose	good	He looked at the sky and wondered whether the weather would hold.	
+1088	prose	good	The wind howled through the trees, and its voice was lonely.	
+1089	prose	good	They're not coming, but their car is still outside.	
+1090	prose	good	There are three reasons for this, and each of them matters.	
+1091	prose	good	Neither of them was ready for what came next.	
+1092	prose	good	Everyone has a secret, and nobody tells the whole truth.	
+1093	prose	good	She walked past the old church and passed the baker's shop.	
+1094	prose	good	He had gone to the market before the rain started.	
+1095	prose	good	We have seen the sea, and we have eaten the fish.	
+1096	prose	good	If I stay, I will miss the train.	
+1097	prose	good	When the sun sets, we will light the fire.	
+1098	prose	good	I wonder if he will ever come back.	
+1099	prose	good	She taught him how to swim, and he learned quickly.	
+1100	prose	good	It was the best of times, it was the worst of times.	
+1101	prose	good	He did not know what to say, so he said nothing.	
+1102	prose	good	You're welcome to stay as long as you like.	
+1103	prose	good	Who's there? Whose boots are these?	
+1104	prose	good	I'd rather be late than miss the whole thing.	
+1105	prose	good	The more he thought about it, the less he liked it.	
+1106	prose	good	The number of stars is beyond counting.	
+1107	prose	good	A number of people were waiting outside.	
+1108	prose	good	The team is winning, and the fans are cheering.	
+1109	prose	good	My mother and I went to the lake.	
+1110	prose	good	Between you and me, I think he knew.	
+1111	prose	good	Let him go; he has made his choice.	
+1112	prose	good	Let's go before it gets dark.	
+1113	prose	good	She doesn't like coffee, but he does.	
+1114	prose	good	He doesn't have time, and neither do I.	
+1115	prose	good	I can't help it if the rain comes.	
+1116	prose	good	She said no and walked away.	
+1117	prose	good	He wouldn't say no to a second helping.	
+1118	prose	good	They made it to the airport on time.	
+1119	prose	good	It made her laugh until she cried.	
+1120	prose	good	The reason is that nobody asked.	
+1121	prose	good	He spoke softly, and she listened to him.	
+1122	prose	good	Listen to me, you fool.	
+1123	prose	good	I'm looking forward to seeing you.	
+1124	prose	good	We enjoy swimming in the lake.	
+1125	prose	good	He is afraid of spiders and proud of his sister.	
+1126	prose	good	They arrived at the station and waited for the train.	
+1127	prose	good	She waited for the bus in the cold.	
+1128	prose	good	The harbor lights flickered in the fog.	
+1129	prose	good	He stood beside her at the window.	
+1130	prose	good	Besides, nobody else was there.	
+1131	prose	good	A thousand tiny lights floated on the water.	
+1132	prose	good	Two dogs barked at the mailman.	
+1133	prose	good	Several children ran across the yard.	
+1134	prose	good	Each student has a different answer.	
+1135	prose	good	Every day she walked to the old mill.	
+1136	prose	good	It is an everyday routine for her.	
+1137	prose	good	The police are searching the woods.	
+1138	prose	good	The people are restless tonight.	
+1139	prose	good	Mathematics is hard for him.	
+1140	prose	good	One of the boys is missing.	
+1141	prose	good	One of the best is waiting outside.	
+1142	prose	good	He is taller than his brother and stronger than his father.	
+1143	prose	good	She is more intelligent than her sister.	
+1144	prose	good	That was the funniest show I have seen.	
+1145	prose	good	I have less time than you do.	
+1146	prose	good	There are fewer students this year.	
+1147	prose	good	She cooks well and sings beautifully.	
+1148	prose	good	He plays the piano very well.	
+1149	prose	good	I used to live in Boston.	
+1150	prose	good	You are supposed to call me.	
+1151	prose	good	The meeting is on Monday, in the morning.	
+1152	prose	good	Her birthday is on January 13th.	
+1153	prose	good	She was born in January.	
+1154	prose	good	I haven't seen him since Monday.	
+1155	prose	good	I have lived here for three years.	
+1156	prose	good	He left three days ago.	
+1157	prose	good	I had seen him two days before.	
+1158	prose	good	Not only did he come, but he also brought dinner.	
+1159	prose	good	Although it was raining, we went for a walk.	
+1160	prose	good	Because it was late, we went home.	
+1161	prose	good	He is the sort of man who never gives up.	
+1162	prose	good	Those kinds of things happen.	
+1163	prose	good	These books are heavy, and those over there are heavier.	
+1164	prose	good	The sword of Eldrin was forged in fire.	
+1165	prose	good	Mr. Smith arrived late. He apologised.	
+1166	prose	good	Dr. Jones lives on Elm St. in the old house.	
+1167	prose	good	She read the letter again. Then she burned it.	
+1168	prose	good	He said, "I'll be there." Then he hung up.	
+1169	prose	good	"Well," said Tom, "go on then."	
+1170	prose	good	"I think so," she said. "But I'm not sure."	
+1171	prose	good	I think I should go.	
+1172	prose	good	He said that I could come too.	
+1173	prose	good	It's Sunday morning, and the bells are ringing.	
+1174	prose	good	It's been a long day.	
+1175	prose	good	The cat licked its paws.	
+1176	prose	good	You and I should talk.	
+1177	prose	good	The boys and girls were singing.	
+1178	prose	good	Whoever wins gets the prize.	
+1179	prose	good	To whom it may concern.	
+1180	prose	good	What do you think he wants?	
+1181	prose	good	He needs to rest, and she wants to help.	
+1182	prose	good	It rained all night, but the roof held.	
+1183	prose	good	The door creaked open and a cold draft swept in.	
+1184	prose	good	Nobody knew where the child had gone.	
+1185	prose	good	There's a storm coming.	
+1186	prose	good	There was a knock at the door.	
+2000	prose2	good	Sunset found her squatting in the grass, watching the beetles climb.	
+2001	prose2	good	"Run," he whispered, and they ran.	
+2002	prose2	good	He had been there since dawn, and he had not eaten.	
+2003	prose2	good	She wondered what it would be like to fly.	
+2004	prose2	good	The old man, who had never learned to read, kept the letter anyway.	
+2005	prose2	good	They sat by the fire; nobody spoke.	
+2006	prose2	good	It was a quiet night, quiet enough to hear the river.	
+2007	prose2	good	"Is anyone there?" Her voice shook. No one answered.	
+2008	prose2	good	I told him he should go home, but he wouldn't listen.	
+2009	prose2	good	The twins, Anna and Ben, were born in May.	
+2010	prose2	good	She asked him to explain the plan to her.	
+2011	prose2	good	He did what he had to do, and he did it well.	
+2012	prose2	good	What he did next surprised everyone.	
+2013	prose2	good	Do you know how to swim?	
+2014	prose2	good	Does she know where he went?	
+2015	prose2	good	He knows how to cook, and she knows how to sing.	
+2016	prose2	good	We were told to wait, so we waited for hours.	
+2017	prose2	good	Every one of them knew the truth.	
+2018	prose2	good	Each year the river floods, and every spring the village rebuilds.	
+2019	prose2	good	Her eyes, tired and red, searched the crowd.	
+2020	prose2	good	The boy ran faster than the wind.	
+2021	prose2	good	There were more than two hundred guests.	
+2022	prose2	good	He gave the keys to Sarah and me.	
+2023	prose2	good	She and I have been friends for years.	
+2024	prose2	good	Neither she nor her brother was at home.	
+2025	prose2	good	The best thing about the house is its garden.	
+2026	prose2	good	It's a shame that its roof leaks.	
+2027	prose2	good	After the storm, nothing remained but ashes.	
+2028	prose2	good	He couldn't have known, could he?	
+2029	prose2	good	They had no choice but to leave.	
+2030	prose2	good	The doctor said it would take a week to heal.	
+2031	prose2	good	She kept walking until the road ended.	
+2032	prose2	good	If it rains tomorrow, we will stay in.	
+2033	prose2	good	As soon as he arrives, we will start.	
+2034	prose2	good	He is as tall as his father, and as stubborn too.	
+2035	prose2	good	The king and his men rode north.	
+2036	prose2	good	Mom says dinner is ready.	
+2037	prose2	good	Back in the day, folks used to talk to their neighbors.	
+2038	prose2	good	The wolves are hungry, and the sheep are afraid.	
+2039	prose2	good	Neither of us has been there.	
+2040	prose2	good	Anyone who wants to leave may do so.	

@@ -1,0 +1,300 @@
+# id	topic	kind	text	skip_reason
+# kind: bad = should be flagged, good = should NOT be flagged. skip_reason non-empty = the PDF rule is dubious or needs meaning; reported separately.
+1	If conditionals	bad	If I will visit London, I will meet you.	
+1	If conditionals	good	If I visit London, I will meet you.	
+1	If conditionals	good	I will talk to him when I see him in the next two days.	
+1	If conditionals	good	I will call you as soon as I arrive at the airport.	
+1	If conditionals	good	If the plan succeeds, I will come.	
+2	Married with/to	bad	She is married with an engineer.	
+2	Married with/to	good	She is married to an engineer.	
+3	Every + plural noun	bad	Every students is intelligent in the class.	
+3	Every + plural noun	good	Every student is intelligent in the class.	
+4	But with although	bad	Although it was raining, but we went to market.	
+4	But with although	good	Although it was raining, we went to market.	
+4	But with although	good	Although he was not well, he attended the function.	
+5	Your/you're	bad	What was you're answer?	
+5	Your/you're	good	What was your answer?	
+5	Your/you're	good	Where is your cell phone?	
+5	Your/you're	good	You're responsible for this project.	
+6	Its/it's	bad	Its Sunday morning.	
+6	Its/it's	good	It's Sunday morning.	
+6	Its/it's	good	The floor looks great with its new mat.	
+6	Its/it's	good	It's raining outside.	
+7	There/their/they're	bad	Parents work for there children.	
+7	There/their/they're	good	Parents work for their children.	
+7	There/their/they're	good	Children are playing with their toys.	
+7	There/their/they're	good	There are many shops.	
+7	There/their/they're	good	They're going to Delhi.	
+8	Most unique	bad	This is the most unique dress.	
+8	Most unique	good	This is the unique dress.	
+8	Most unique	good	That job is perfect for him.	
+8	Most unique	good	These conditions are ideal.	
+9	Me/I	bad	Smith and me went to the mall.	
+9	Me/I	good	Smith and I went to the mall.	
+9	Me/I	good	My brother and I love ice cream.	
+9	Me/I	good	John and I are planning a trip.	
+10	Then/than	bad	She is beautiful then her.	first bad/good pair is not natural English; real error is 'prettier then her'
+10	Then/than	good	She is beautiful than her.	
+10	Then/than	good	He is clever than her.	
+10	Then/than	good	First I will go to Amritsar then Delhi.	
+11	Amount/number	bad	A greater amount of people are visiting the stadium.	
+11	Amount/number	good	A greater number of people are visiting the stadium.	
+11	Amount/number	good	A large amount of sand is needed for the project.	
+12	Fewer/less	bad	There are less dresses.	
+12	Fewer/less	good	There are fewer dresses.	
+12	Fewer/less	good	There are fewer students in the class.	
+13	Did not + base verb	bad	I did not saw him yesterday.	
+13	Did not + base verb	good	I did not see him yesterday.	
+13	Did not + base verb	good	I did not study Maths.	
+13	Did not + base verb	good	He didn't get up early today.	
+14	Too/enough	bad	This shirt is too enough for me.	
+14	Too/enough	good	This shirt is too big for me.	
+14	Too/enough	good	I don't have enough time.	
+14	Too/enough	good	The ring was too small.	
+15	Gerunds	bad	We enjoy to go for walk after dinner.	
+15	Gerunds	good	We enjoy going for walk after dinner.	
+15	Gerunds	good	I love eating ice cream.	
+16	Every day/everyday	bad	He need a car for his every day activities.	
+16	Every day/everyday	good	He needs a car for his everyday activities.	
+16	Every day/everyday	good	I meet him every day.	
+16	Every day/everyday	good	He goes to college every day.	
+16	Every day/everyday	good	I need a laptop for my everyday work.	
+17	Joint possession	bad	It is Smith's and Peter's car.	'Smith's and Peter's car' is only wrong for joint ownership; ambiguous
+17	Joint possession	good	It is Smith and Peter's car.	
+17	Joint possession	good	This is Mark and Smith's house.	
+18	His/its for animals	bad	The dog lost his bone.	fine for a known pet; context-dependent
+18	His/its for animals	good	The dog lost its bone.	
+19	Well/good (feelings)	bad	He feels well.	'feels well' is correct when it means healthy
+19	Well/good (feelings)	good	He feels good.	
+19	Well/good (feelings)	good	She feels good after attending a concert.	
+20	Well/good (quality)	bad	She cooks good.	
+20	Well/good (quality)	good	She cooks well.	
+20	Well/good (quality)	good	The machine works well.	
+20	Well/good (quality)	good	She sings well.	
+21	Each of ... is	bad	Each of the cars are fast.	
+21	Each of ... is	good	Each of the cars is fast.	
+21	Each of ... is	good	Each of the students is fast.	
+21	Each of ... is	good	Neither of them is my classmate.	
+21	Each of ... is	good	One of my friends is obese.	
+22	One of the + plural	bad	One of the train is late.	
+22	One of the + plural	good	One of the trains is late.	
+22	One of the + plural	good	Taj Mahal is one of the seven wonders of the world.	
+22	One of the + plural	good	He is one of my best friends.	
+23	Police are	bad	The police is coming.	
+23	Police are	good	The police are coming.	
+23	Police are	good	The police are blocking off the street where the robbery occurred.	
+23	Police are	good	The police department is at the corner of the Main street.	
+24	Misplaced adverb	bad	He almost washed all of the cars.	needs meaning, hard to automate
+24	Misplaced adverb	good	He washed almost all of the cars.	
+25	Incomplete comparison	bad	Smith likes Maths more than English.	original is not an error; skip
+25	Incomplete comparison	good	Smith likes Maths more than he likes English.	
+26	A/an	bad	It is a old television set.	
+26	A/an	good	It is an old television set.	
+26	A/an	good	a horse	
+26	A/an	good	an hour	
+26	A/an	good	a university	
+27	Alternative/alternate	bad	The salad is a healthier alternate.	
+27	Alternative/alternate	good	The salad is a healthier alternative.	
+27	Alternative/alternate	good	The various alternative methods for resolving disputes.	
+28	Amicable/amiable	bad	The teams were amicable.	both words can fit; weak rule
+28	Amicable/amiable	good	The teams were amiable.	
+28	Amicable/amiable	good	The amiable young man greeted me.	
+28	Amicable/amiable	good	The meeting was amicable.	
+29	Among/between	bad	She could not decide among the two shirts.	
+29	Among/between	good	She could not decide between the two shirts.	
+29	Among/between	good	They had to choose the winner between the red and the blue teams.	
+29	Among/between	good	They had to choose the winner among the 5 competing teams.	
+30	Beside/besides	bad	Ask him to sit besides me.	
+30	Beside/besides	good	Ask him to sit beside me.	
+30	Beside/besides	good	The bride was sitting beside the groom at the reception.	
+30	Beside/besides	good	Besides her famous cupcakes, she will donate cookies and a pie to the bake sale.	
+31	Bring/take	bad	He will bring the book from his friend.	depends on viewpoint; skip
+31	Bring/take	good	He will take the book from his friend.	
+32	Can/may	bad	I may drive because I passed the driving test.	hard
+32	Can/may	good	I can drive because I passed the driving test.	
+32	Can/may	good	It may rain tomorrow.	
+33	Deadly/deathly	bad	A bee sting can be deathly.	
+33	Deadly/deathly	good	A bee sting can be deadly.	
+33	Deadly/deathly	good	It is a deadly weapon.	
+33	Deadly/deathly	good	His face was deathly pale.	
+34	Farther/further	bad	We will drive no further tonight.	both accepted by modern dictionaries
+34	Farther/further	good	We will drive no farther tonight.	
+34	Farther/further	good	We need to discuss this further.	
+35	Since/for	bad	I've been in America since 3 months.	
+35	Since/for	good	I've been in America for 3 months.	
+35	Since/for	good	I have lived here since 1997.	
+36	On/in dates	bad	In January 13th, I will be twenty.	
+36	On/in dates	good	On January 13th, I will be twenty.	
+36	On/in dates	good	He will report on September 26.	
+36	On/in dates	good	I was born in 1990.	
+37	Double negative	bad	At the party, I didn't meet no one.	
+37	Double negative	good	At the party, I didn't meet anyone.	
+37	Double negative	good	I like no one in their family.	
+38	If I were	bad	If I was going to the movies, I would call you.	'if I was' is accepted for real past possibilities
+38	If I were	good	If I were going to the movies, I would call you.	
+38	If I were	good	If I were the prime minister, I would resign.	
+39	Themselves	bad	They organised the party themself.	
+39	Themselves	good	They organised the party themselves.	
+39	Themselves	good	They will do their work themselves.	
+40	Very/really	bad	I felt very fantastic.	not a real rule; skip
+40	Very/really	good	I felt really fantastic.	
+40	Very/really	good	I really want to go.	
+41	More + short adjective	bad	She is more tall than Sita.	
+41	More + short adjective	good	She is taller than Sita.	
+41	More + short adjective	good	He is smarter than David.	
+42	In my point of view	bad	In my point of view, the coaching class really helps.	widely used; style only
+42	In my point of view	good	From my point of view, the coaching class really helps.	
+42	In my point of view	good	In my view, he is the right person for the job.	
+43	During/for	bad	She studied for the football game.	original is a correct sentence; skip
+43	During/for	good	She studied during the football game.	
+44	Couldn't be better	bad	It could be better than that when it is the best.	skip
+44	Couldn't be better	good	It couldn't be better than that when it is the best.	
+45	Awhile/a while	bad	I'll stay in Mumbai for awhile.	
+45	Awhile/a while	good	I'll stay in Mumbai for a while.	
+45	Awhile/a while	good	We chatted for a while.	
+45	Awhile/a while	good	Stand here awhile.	
+46	Alot	bad	He likes her alot.	
+46	Alot	good	He likes her a lot.	
+46	Alot	good	They travel a lot.	
+47	Forty	bad	She gave me fourty dollars.	
+47	Forty	good	She gave me forty dollars.	
+48	Lightning/lighting	bad	A tremendous flash of lighting.	
+48	Lightning/lighting	good	A tremendous flash of lightning.	
+48	Lightning/lighting	good	They use fluorescent bulbs for street lighting.	
+49	Loose/lose	bad	I don't want to loose the job.	
+49	Loose/lose	good	I don't want to lose the job.	
+49	Loose/lose	good	The lid of the container is loose.	
+50	Passed/past	bad	The car past the bus.	noun subject: needs more context
+50	Passed/past	good	The car passed the bus.	
+50	Passed/past	good	The danger is now past.	
+51	Pore/pour	bad	Words pored from his mouth.	
+51	Pore/pour	good	Words poured from his mouth.	
+51	Pore/pour	good	Water poured off the roof.	
+52	Pronounciation	bad	I cannot understand his pronounciation.	spelling
+52	Pronounciation	good	I cannot understand his pronunciation.	
+53	Tough/though	bad	Slow tough that may be.	
+53	Tough/though	good	Slow though that may be.	
+54	Two/too	bad	He wore suits that seemed a size two small for him.	needs deeper logic or is a matter of style
+54	Two/too	good	He wore suits that seemed a size too small for him.	
+54	Two/too	good	A romantic weekend for two in Paris.	
+55	Weather/whether	bad	If the whether is good we can go for a walk.	
+55	Weather/whether	good	If the weather is good we can go for a walk.	
+55	Weather/whether	good	He seemed undecided whether to go or stay.	
+56	Wreck/wreak	bad	The plane was reduced to a smouldering wreak.	
+56	Wreck/wreak	good	The plane was reduced to a smouldering wreck.	
+56	Wreck/wreak	good	Torrential rainstorms wreaked havoc yesterday.	
+57	Who's/whose	bad	Whose there?	
+57	Who's/whose	good	Who's there?	
+57	Who's/whose	good	Whose round is it?	
+58	Averse/adverse	bad	Taxes are having an averse effect on production.	
+58	Averse/adverse	good	Taxes are having an adverse effect on production.	
+58	Averse/adverse	good	He is averse to smoking.	
+59	Too ... so that	bad	She is too honest so that she cannot lie.	
+59	Too ... so that	good	She is too honest to lie.	
+59	Too ... so that	good	She is so honest that she cannot lie.	
+60	Ago/before	bad	He went five minutes before.	
+60	Ago/before	good	He went five minutes ago.	
+60	Ago/before	good	I met my wife twenty years ago.	
+61	Disinterested	bad	He is totally disinterested in Maths.	
+61	Disinterested	good	He is totally uninterested in Maths.	
+62	Either ... is	bad	Either Jack or Joan are correct.	
+62	Either ... is	good	Either Jack or Joan is correct.	
+62	Either ... is	good	Either the house or flats are for sale.	
+62	Either ... is	good	Either the flats or the house is for sale.	
+63	Each ... their	bad	Each candidate should have their own stationery.	singular they is accepted; skip
+63	Each ... their	good	All candidates should have their own stationery.	
+64	Better/best	bad	Who's the best performer, John or Smith?	needs deeper logic or is a matter of style
+64	Better/best	good	Who's the better performer, John or Smith?	
+64	Better/best	good	Smith is the best student in the class.	
+65	These/those	bad	Do you visit these temples over there?	
+65	These/those	good	Do you visit those temples over there?	
+66	Waiting on/for	bad	She waited on the train, but it didn't come.	
+66	Waiting on/for	good	She waited for the bus, but it didn't come.	
+66	Waiting on/for	good	The children are waiting for their parents.	
+67	Ran/run	bad	The thief has ran away.	
+67	Ran/run	good	The thief has run away.	
+67	Ran/run	good	She ran yesterday.	
+67	Ran/run	good	They have run every day this week.	
+68	Suppose to	bad	I'm suppose to write assignments.	
+68	Suppose to	good	I'm supposed to write assignments.	
+68	Suppose to	good	I am supposed to call her.	
+69	Let him	bad	Let he go there.	
+69	Let him	good	Let him go there.	
+69	Let him	good	Let her try.	
+70	Whom/who	bad	The person whom we met yesterday was Smith's uncle.	PDF is wrong here: 'whom we met' is correct; do not test
+70	Whom/who	good	The person who we met yesterday was Smith's uncle.	
+70	Whom/who	good	Whom should I call?	
+71	We, you, they order	bad	You, they and we should go together.	style; skip
+71	We, you, they order	good	We, you and they should go together.	
+72	One another	bad	They both love one another.	
+72	One another	good	They both love each other.	
+72	One another	good	His family members love one another.	
+73	Mathematics is	bad	Mathematics are his favourite subject.	
+73	Mathematics is	good	Mathematics is his favourite subject.	
+73	Mathematics is	good	She thinks Physics is a difficult subject.	
+74	Know how	bad	I know to drive a car.	
+74	Know how	good	I know how to drive a car.	
+75	Tense in subordinate clause	bad	She succeeded because she works hard.	needs deeper logic or is a matter of style
+75	Tense in subordinate clause	good	She succeeded because she worked hard.	
+76	Universal truth	bad	My father said the earth moved round the sun.	skip
+76	Universal truth	good	My father said the earth moves round the sun.	
+77	Present perfect continuous	bad	I am waiting for you in the office for the last two hours.	
+77	Present perfect continuous	good	I have been waiting for you in the office for the last two hours.	
+78	Future in time clause	bad	I will wait for them, till they will finish their work.	
+78	Future in time clause	good	I will wait for them, till they finish their work.	
+79	Past tense with yesterday	bad	I have completed my project yesterday.	
+79	Past tense with yesterday	good	I completed my project yesterday.	
+79	Past tense with yesterday	good	We visited Agra last week.	
+80	Some/any	bad	Can I borrow any money?	'any' in questions is acceptable; skip
+80	Some/any	good	Can I borrow some money?	
+80	Some/any	good	I don't have any friends.	
+81	Wiser than strong	bad	Jack is wiser than strong.	skip
+81	Wiser than strong	good	Jack is more wise than strong.	
+82	Senior to	bad	She is senior than me.	
+82	Senior to	good	She is senior to me.	
+83	Came across with	bad	Smith came across with a beggar.	
+83	Came across with	good	Smith came across a beggar.	
+83	Came across with	good	I came across my aunt.	
+84	Ordinal before cardinal	bad	The two last columns of the article are not clear.	
+84	Ordinal before cardinal	good	The last two columns of the article are not clear.	
+85	Missing subject after and	bad	We noticed the man lying seriously ill and died shortly afterwards.	hard
+85	Missing subject after and	good	We noticed the man lying seriously ill and he died shortly afterwards.	
+86	Neither not	bad	The company decided not to appoint him neither for the position of clerk nor for that of a stenographer.	
+86	Neither not	good	I eat neither chocolate nor ice cream.	
+87	Habit of	bad	She has the habit to arrive late.	
+87	Habit of	good	She has the habit of arriving late.	
+87	Habit of	good	I have the habit of going to bed early.	
+88	The number is	bad	The number of vehicles are increasing on the road.	
+88	The number is	good	The number of vehicles is increasing on the road.	
+88	The number is	good	The number of animals is decreasing.	
+88	The number is	good	A number of people are going to the movies.	
+89	Collocation due to the fact	bad	The reason is due to fact that I did not receive pay on time.	
+89	Collocation due to the fact	good	The reason is due to the fact that I did not receive pay on time.	
+90	Must have to	bad	You must have to complete your assignment.	
+90	Must have to	good	You have to complete your assignment.	
+90	Must have to	good	You must call him.	
+91	As well as	bad	The ring as well as necklaces are available at the shop.	
+91	As well as	good	The ring as well as necklaces is available at the shop.	
+92	The Gita	bad	Gita is his favourite holy book.	skip
+92	The Gita	good	The Gita is his favourite holy book.	
+93	Emphasizes on	bad	Our teacher emphasizes on the need for a lot of practice.	
+93	Emphasizes on	good	Our teacher emphasizes the need for a lot of practice.	
+94	Admission to	bad	The ticket grants admission for the show.	
+94	Admission to	good	The ticket grants admission to the show.	
+95	But to	bad	He does nothing but to find faults with others.	needs deeper logic or is a matter of style
+95	But to	good	He does nothing but find faults with others.	
+95	But to	good	He does nothing but sits in front of the TV all day.	
+96	Blind in	bad	Ram is blind with one eye.	
+96	Blind in	good	Ram is blind in one eye.	
+97	One ... one's	bad	One should respect the religion of others as much as his own.	
+97	One ... one's	good	One should respect the religion of others as much as one's own.	
+98	Hard/hardly	bad	It is a hardly job.	
+98	Hard/hardly	good	It is a hard job.	
+98	Hard/hardly	good	He hardly gets up early.	
+98	Hard/hardly	good	The question is really hard.	
+99	Early/soon	bad	He'll be home early.	context dependent
+99	Early/soon	good	He'll be home soon.	
+99	Early/soon	good	We ate an early lunch.	
+100	Listen to	bad	She is listening music.	
+100	Listen to	good	She is listening to music.	
+100	Listen to	good	I like to listen to music.	

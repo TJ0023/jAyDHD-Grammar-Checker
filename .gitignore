@@ -1,0 +1,7 @@
+# Build output (huge, rebuilt by Cargo)
+target/
+# Never upload Google sign-in files
+client_secret*.json
+google_token.json
+*.log
+.env

@@ -1,0 +1,40 @@
+[package]
+name = "jaydhd-grammar-checker"
+version = "0.1.0"
+edition = "2024"
+default-run = "jAyDHD-Grammar-Checker"
+build = "build.rs"
+
+[[bin]]
+name = "jAyDHD-Grammar-Checker"
+path = "src/main.rs"
+
+[dependencies]
+# glow (OpenGL) draws see-through windows correctly on Windows; the default wgpu does not.
+eframe = { version = "0.37", features = ["glow"] }
+# Draws the SVG placeholder pictures.
+egui_extras = { version = "0.37", features = ["svg"] }
+rfd = "0.17"
+# Talks to Google Docs (sign-in and reading/editing the document).
+lz4_flex = "0.11"
+ureq = { version = "2", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp", "tiff"] }
+craft-proof = { git = "https://github.com/storytold/craft-libs", rev = "01315d9c92b5b0e69082d35ca56099461a1efd45" }
+
+[target.'cfg(windows)'.dependencies]
+uiautomation = "0"
+# The system tray icon, and the clipboard for the capture hotkeys (text only).
+tray-icon = "0.21"
+arboard = { version = "3", default-features = false }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+# Puts the icon into the .exe so it shows in Explorer and on the taskbar.
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"

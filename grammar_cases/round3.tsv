@@ -1,0 +1,489 @@
+# id	topic	kind	text	skip_reason
+# Round 3: wider net of fiction-writer mistakes, written to find what the checker still misses.
+2000	agree	bad	The group of boys are playing outside.	collective noun: plural verb is accepted
+2001	agree	bad	Neither of the options are good.	
+2002	agree	bad	Each of the students have a book.	
+2003	agree	bad	The list of items were long.	
+2004	agree	bad	There was three cats on the porch.	
+2005	agree	bad	There is many reasons to leave.	
+2006	agree	bad	He don't know the answer.	
+2007	agree	bad	She don't like it here.	
+2008	agree	bad	They was late again.	
+2009	agree	bad	We was ready to go.	
+2010	agree	bad	You was right about him.	
+2011	agree	bad	I is tired of waiting.	
+2012	agree	bad	The dogs barks all night.	
+2013	agree	bad	My brother and I was there.	
+2014	agree	bad	Everybody were laughing.	
+2015	agree	bad	The news are bad today.	
+2016	agree	bad	A number of problem exist.	rare; needs noun-number logic
+2017	agree	bad	One of my friends are coming.	
+2018	agree	bad	The man who live next door is loud.	
+2019	agree	bad	Here are the news you wanted.	'news' handling is ambiguous
+2020	tense	bad	Yesterday I go to the store.	
+2021	tense	bad	Last week she see him at the market.	
+2022	tense	bad	I seen him yesterday.	
+2023	tense	bad	He has ate all the cake.	
+2024	tense	bad	She has drank too much.	
+2025	tense	bad	They have went home.	
+2026	tense	bad	I have saw that movie.	
+2027	tense	bad	We done our best.	
+2028	tense	bad	He come home late last night.	
+2029	tense	bad	She sung beautifully last night, and everyone clapped.	
+2030	tense	bad	He had wrote the letter before she arrived.	
+2031	tense	bad	I would have went if I had known.	
+2032	tense	bad	If I was you, I would leave.	
+2033	tense	bad	She said she will come tomorrow.	reported speech: needs deeper tense logic
+2034	tense	bad	He swimmed across the river.	
+2035	tense	bad	The bird flied away.	
+2036	tense	bad	I knowed it all along.	
+2037	tense	bad	She teached me everything.	
+2038	tense	bad	They buyed a new car.	
+2039	tense	bad	He thinked about it for hours.	
+2040	pron	bad	Me and him went to the shop.	
+2041	pron	bad	Her and I are friends.	
+2042	pron	bad	Him and his brother left early.	
+2043	pron	bad	Between you and I, it's over.	
+2044	pron	bad	She gave it to John and I.	
+2045	pron	bad	Them are my books.	
+2046	pron	bad	Us girls stick together, and we is strong.	
+2047	pron	bad	The cat licked it's paws.	
+2048	pron	bad	The dog wagged it's tail.	
+2049	pron	bad	Who did you give the book to? He is the one who's book it is.	
+2050	pron	bad	This is her's.	
+2051	pron	bad	That car is our's.	
+2052	pron	bad	Theirselves did it.	
+2053	pron	bad	He hurt hisself.	
+2054	pron	bad	They did it by themself.	
+2055	pron	bad	Me went home.	
+2056	pron	bad	I gave she the keys.	
+2057	pron	bad	Him is my friend.	
+2058	pron	bad	Her went to town.	
+2059	hom	bad	I could care less about their opinion, but the weather is nice, to.	
+2060	hom	bad	Their is a problem.	
+2061	hom	bad	Your the best.	
+2062	hom	bad	Please lead the way, I will follow you're lead.	
+2063	hom	bad	The principle reason is money.	
+2064	hom	bad	He was to tired to continue.	
+2065	hom	bad	I want to loose weight.	
+2066	hom	bad	She is taller then me.	
+2067	hom	bad	The affect of the drug was immediate.	
+2068	hom	bad	He had a big effect on how I feel, it effected me deeply and I was affected by it all, then I laughed.	
+2069	hom	bad	Take a deep breathe.	
+2070	hom	bad	I need to brake the news to her.	
+2071	hom	bad	The wind blue hard.	
+2072	hom	bad	She past the ball.	
+2073	hom	bad	He ran passed the house.	
+2074	hom	bad	The whole thing was a wonder, I wounder how it happened.	'wounder' is also a real word
+2075	hom	bad	The knight was dark and cold.	correct sentence (test written wrong)
+2076	hom	bad	I want to by a new coat.	
+2077	hom	bad	She herd a noise.	
+2078	hom	bad	He threw the door open and walked threw the hall, though it was tough.	
+2079	hom	bad	We went their yesterday.	
+2080	hom	bad	She is going to meat him.	
+2081	hom	bad	He lead the team yesterday.	
+2082	hom	bad	I have a lot of patients.	'patients' is a correct word
+2083	hom	bad	The dessert was hot and dry, a vast desert of sand.	correct grammar
+2084	hom	bad	He is quiet noisy.	nonsense, not a typical error
+2085	hom	bad	Its a beautiful day.	
+2086	hom	bad	Who's coat is this?	
+2087	hom	bad	Whose there?	
+2088	hom	bad	The sight of the building was impressive, and he sighed at the cite.	needs meaning, not grammar
+2089	word	bad	I would of gone if I could.	
+2090	word	bad	She could of won.	
+2091	word	bad	They should of called.	
+2092	word	bad	He must of forgotten.	
+2093	word	bad	Irregardless of the cost, we leave.	
+2094	word	bad	I seen alot of things.	
+2095	word	bad	He is a alien.	
+2096	word	bad	She ate an banana.	
+2097	word	bad	It was a unusual day.	
+2098	word	bad	He wants an university degree.	
+2099	word	bad	I have less friends than you.	
+2100	word	bad	There are less people here.	
+2101	word	bad	He is more taller than me.	
+2102	word	bad	This is the most easiest test.	
+2103	word	bad	She is more prettier than her sister.	
+2104	word	bad	He did good on the test.	
+2105	word	bad	I feel badly about it.	debated usage
+2106	word	bad	She sings good.	
+2107	word	bad	They run quick.	flat adverb is accepted in speech
+2108	word	bad	I can't hardly wait.	
+2109	word	bad	He didn't say nothing.	
+2110	word	bad	I don't have no money.	
+2111	word	bad	She never goes nowhere.	
+2112	word	bad	Me and my friend goes there often.	
+2113	word	bad	The reason is because he was late.	
+2114	word	bad	He is different than his brother, and I agree with he.	
+2115	word	bad	The data shows that is true, and a criteria was set.	
+2116	word	bad	Everyday I walk to school.	
+2117	word	bad	He walked slow down the road.	flat adverb is accepted in speech
+2118	word	bad	Alot of people came.	
+2119	word	bad	She is the one whom called me.	
+2120	word	bad	The man which called me left.	
+2121	word	bad	Who is the person whom you saw yesterday and whom is leaving?	
+2122	rep	bad	I went to to the store.	
+2123	rep	bad	She said that that was fine, but the the dog barked.	
+2124	rep	bad	He was was angry.	
+2125	rep	bad	It is is a good day.	
+2126	rep	bad	We will will win.	
+2127	rep	bad	The the end.	
+2128	rep	bad	I think that that is wrong, and and I know it.	
+2129	rep	bad	This is a test of of the system.	
+2130	rep	bad	He went in in the room.	
+2131	rep	bad	She can can do it.	
+2132	miss	bad	I going to the store.	
+2133	miss	bad	She going home.	
+2134	miss	bad	He a good man.	
+2135	miss	bad	They is happy and we was sad.	
+2136	miss	bad	What you doing here?	
+2137	miss	bad	Where you going?	
+2138	miss	bad	How you know that?	dialect question; relative clause ambiguity
+2139	miss	bad	I am agree with you.	
+2140	miss	bad	He is knowing the answer.	
+2141	miss	bad	I am liking this song.	
+2142	miss	bad	She did went to the store.	
+2143	miss	bad	He does not goes there.	
+2144	miss	bad	Did she called you?	
+2145	miss	bad	Do you wants some tea?	
+2146	miss	bad	Does he likes pizza?	
+2147	miss	bad	He can swims well.	
+2148	miss	bad	She must goes now.	
+2149	miss	bad	I will goes tomorrow.	
+2150	miss	bad	They can't to come.	
+2151	miss	bad	He made me to cry.	
+2152	miss	bad	Let me to explain.	
+2153	prep	bad	I am good in math.	
+2154	prep	bad	She is married with a doctor.	
+2155	prep	bad	He arrived to the airport.	
+2156	prep	bad	I am interested on music.	
+2157	prep	bad	They discussed about the plan.	
+2158	prep	bad	She is afraid from spiders.	
+2159	prep	bad	He depends of his parents.	
+2160	prep	bad	I look forward to see you.	
+2161	prep	bad	We talked over the phone about of the trip.	
+2162	prep	bad	He is angry on me.	
+2163	prep	bad	She is good at to dance.	
+2164	prep	bad	I agree to you.	
+2165	prep	bad	He explained me the problem.	
+2166	prep	bad	She suggested me to go.	
+2167	prep	bad	I am waiting you.	
+2168	prep	bad	I called to him yesterday.	'called to him' is correct
+2169	prep	bad	He entered into the room.	
+2170	prep	bad	She reached to the top.	'reached to' is correct (stretched)
+2171	prep	bad	They are in the home now, sitting in the sofa.	'in the sofa' can be right
+2172	art	bad	I saw elephant at the zoo.	missing article needs deeper logic
+2173	art	bad	She is best student in class.	missing article needs deeper logic
+2174	art	bad	He is a honest man.	
+2175	art	bad	I need an advice.	
+2176	art	bad	She gave me many informations.	
+2177	art	bad	He has a lot of furnitures.	
+2178	art	bad	I bought three luggages.	
+2179	art	bad	The equipments are old.	
+2180	art	bad	We need more homeworks.	
+2181	art	bad	She has a good knowledges.	
+2182	punct	bad	He said hello.She waved back.	
+2183	punct	bad	This is wrong ,and so is that.	
+2184	punct	bad	She left  early.	
+2185	punct	bad	He was tired , very tired.	
+2186	punct	bad	Wait!why did you go?	
+2187	punct	bad	What are you doing??	doubled marks are a style choice
+2188	punct	bad	He stopped..and looked.	
+2189	punct	bad	i went home.	
+2190	punct	bad	She said that he was late. he was not.	
+2191	punct	bad	hello there. my name is Tom.	
+2192	punct	bad	He met john at the park.	lowercase names need a name list
+2193	punct	bad	We visited paris in july.	
+2194	punct	bad	On monday I will go.	
+2195	punct	bad	The Doctor said so.	capitalised titles are common in fiction
+2196	punct	bad	she walked in.	
+2197	punct	bad	He said "hello" .  She nodded.	dialogue module handles this
+2198	punct	bad	"I can't," he said, "I won't".	dialogue module handles this
+2199	punct	bad	"Get out" she said.	dialogue module handles this
+2200	punct	bad	"Where are you going" he asked.	dialogue module handles this
+2201	punct	bad	He asked, "are you ready?" and left.	dialogue module handles this
+2202	comma	bad	However I disagree.	
+2203	comma	bad	I like apples, but, I hate pears.	style
+2204	comma	bad	Hello John how are you?	vocative comma: style
+2205	comma	bad	Yes I will.	style in dialogue
+2206	comma	bad	No I can't.	style in dialogue
+2207	comma	bad	I came I saw I conquered.	deliberate rhetoric
+2208	comma	bad	He was tired, she was not, they left, we stayed.	deliberate comma series
+2209	comma	bad	It was raining, we stayed inside.	comma splice: common in fiction
+2210	comma	bad	I love you, you love me, we are family.	deliberate comma series
+2211	comma	bad	The room was dark, he could not see.	comma splice: common in fiction
+2212	sent	bad	Because I was late.	fragments are a style in fiction
+2213	sent	bad	Although he tried hard.	fragments are a style in fiction
+2214	sent	bad	Running down the street.	fragments are a style in fiction
+2215	sent	bad	When the sun set.	fragments are a style in fiction
+2216	sent	bad	Which was a big mistake.	fragments are a style in fiction
+2217	sent	bad	The man in the hat.	fragments are a style in fiction
+2218	sent	bad	If you want to go.	fragments are a style in fiction
+2219	sent	bad	And then he left and and she cried.	
+2220	word2	bad	He is very unique.	
+2221	word2	bad	This is the most unique idea.	
+2222	word2	bad	She is quite pregnant.	needs deeper logic or is a matter of style
+2223	word2	bad	It was a very perfect day.	needs deeper logic or is a matter of style
+2224	word2	bad	The reason why is because I said so.	
+2225	word2	bad	Close proximity to the shop.	
+2226	word2	bad	He repeated it again.	style
+2227	word2	bad	She returned back home.	
+2228	word2	bad	They all joined together.	
+2229	word2	bad	The end result was bad.	
+2230	word2	bad	It is a free gift.	
+2231	word2	bad	Past history shows this.	
+2232	word2	bad	He reversed back the car.	
+2233	word2	bad	We need to plan ahead for the future.	style
+2234	word2	bad	Each and every one of them are here.	
+2235	word2	bad	The final outcome was clear.	style
+2236	word2	bad	Advance planning is key.	style
+2237	word2	bad	She is a tall giant.	style
+2238	word2	bad	In my own personal opinion, it's wrong.	style
+2239	word2	bad	He is a added bonus.	
+2240	word2	bad	The both of them left.	acceptable in speech
+2241	word2	bad	All of a sudden, he suddenly stopped.	style
+2242	word2	bad	Please RSVP back to me.	style
+2243	word2	bad	The ATM machine is broken.	style
+2244	word2	bad	Whether or not or whether, it works.	nonsense
+2245	r3	good	"Where are you going?" he asked.	
+2246	r3	good	She looked at him, then looked away.	
+2247	r3	good	I don't know what you mean, he said quietly.	
+2248	r3	good	"Fine," she said. "Have it your way."	
+2249	r3	good	He ran. She followed. Neither of them spoke.	
+2250	r3	good	The group of boys was playing outside.	
+2251	r3	good	There were three cats on the porch.	
+2252	r3	good	Neither of them was ready.	
+2253	r3	good	Each of the students has a book.	
+2254	r3	good	If I were you, I would leave.	
+2255	r3	good	He'd rather not go, but they'd insist.	
+2256	r3	good	It's the dog's bowl, not the cat's.	
+2257	r3	good	Their car is faster than ours.	
+2258	r3	good	She wondered whether it was too late.	
+2259	r3	good	I could hardly breathe.	
+2260	r3	good	We've been waiting for hours.	
+2261	r3	good	"Not now," Mara whispered. "Not here."	
+2262	r3	good	The wind howled through the trees, and the old house groaned.	
+2263	r3	good	He didn't say anything, and she didn't ask.	
+2264	r3	good	Who did you see? I saw the man whom everyone feared.	
+2265	r3	good	Between you and me, it was a mistake.	
+2266	r3	good	She and I went to the shop.	
+2267	r3	good	He gave the keys to her and me.	
+2268	r3	good	It was a hot day, and the road shimmered.	
+2269	r3	good	A hundred soldiers were marching, but one lagged behind.	
+2270	r3	good	The data show a clear trend.	
+2271	r3	good	None of the answers were correct.	
+2272	r3	good	Everyone is here, and everyone is waiting.	
+2273	r3	good	"Do you want some tea?" she asked.	
+2274	r3	good	He had never seen such a thing before.	
+2275	r3	good	The knight rode through the night.	
+2276	r3	good	They've gone to the lake, and I've stayed home.	
+2277	r3	good	What are you doing here?	
+2278	r3	good	He wasn't sure if he'd heard her right.	
+2279	r3	good	Once upon a time, there lived a king.	
+2280	r3	good	I'd have gone if I'd known.	
+2281	r3	good	She was taller than he was.	
+2282	r3	good	You're the best, and your friends know it.	
+2283	r3	good	Its tail wagged happily as the dog ran past.	
+2284	r3	good	He was too tired to continue, so he lay down.	
+2285	r3	good	The effect was immediate, and it affected everyone.	
+2286	r3	good	Take a deep breath, then let it out.	
+2287	r3	good	She threw the ball and ran through the gate.	
+2288	r3	good	He lost his keys and lost his temper.	
+2289	r3	good	The principal spoke to the students about principles.	
+2290	r3	good	Whose coat is this? Who's there?	
+2291	r3	good	A thin smile crossed his face -- brief, cold.	
+2292	r3	good	"I never said that," he said, "and I never would."	
+2293	r3	good	She had been running for hours when the sun finally rose.	
+2294	r3	good	The more he thought about it, the less he liked it.	
+2295	r3	good	There's a lot to do, and not much time.	
+3000	r3-good	good	The dogs bark at night, and the cats run away.	
+3001	r3-good	good	The kids play outside while the leader of the dogs barks.	
+3002	r3-good	good	The sales team works hard, and the physics lab opens at nine.	
+3003	r3-good	good	He went to the market, then to the bank, then to school.	
+3004	r3-good	good	From hot to cold, the weather changed in an hour.	
+3005	r3-good	good	She went from tall to short in the mirror's warp.	
+3006	r3-good	good	They went their separate ways.	
+3007	r3-good	good	We stayed there yesterday and left today.	
+3008	r3-good	good	He looked up, and their eyes met.	
+3009	r3-good	good	She loved their house, and she went there often.	
+3010	r3-good	good	I'm going to be late, and I'm going to need a ride.	
+3011	r3-good	good	He turned to old friends for help.	
+3012	r3-good	good	It's too late to go, and it's too far to walk.	
+3013	r3-good	good	The man who lives next door waves every morning.	
+3014	r3-good	good	The people who live there are kind.	
+3015	r3-good	good	Someone who knows the way should lead us.	
+3016	r3-good	good	The one who runs fastest wins.	
+3017	r3-good	good	Yesterday I went to the store and bought bread.	
+3018	r3-good	good	Last night she saw him at the door.	
+3019	r3-good	good	Every day I go to school, and every day I come home.	
+3020	r3-good	good	I go there often, and I always see him.	
+3021	r3-good	good	When I go, I will take the car.	
+3022	r3-good	good	If I go, will you come?	
+3024	r3-good	good	They have done their best, and I have done mine.	
+3025	r3-good	good	He is done with the work.	
+3026	r3-good	good	She sang beautifully, and he drank his tea.	
+3027	r3-good	good	I have drunk enough, and she has sung twice.	
+3028	r3-good	good	If I were you, I would stay.	
+3029	r3-good	good	If I was late, he never said a word.	
+3030	r3-good	good	He did well on the test.	
+3031	r3-good	good	I can hardly wait, and she could barely stand.	
+3032	r3-good	good	He didn't say anything, and she said nothing.	
+3033	r3-good	good	Nothing happened, and nobody cared.	
+3034	r3-good	good	I am going to the store.	
+3035	r3-good	good	She is going home, and they are going with her.	
+3036	r3-good	good	What are you doing here? Where are you going?	
+3037	r3-good	good	They agree with her, and I agree with him.	
+3038	r3-good	good	I agreed to the plan.	
+3039	r3-good	good	She suggested that I go.	
+3040	r3-good	good	He suggested we leave early.	
+3041	r3-good	good	I am waiting for you, and I waited for him all day.	
+3042	r3-good	good	Wait, you forgot your coat.	
+3043	r3-good	good	He entered the room and entered into an agreement later.	
+3044	r3-good	good	She entered into a long silence.	
+3045	r3-good	good	She made me cry, and he let me go.	
+3046	r3-good	good	He made her laugh and let them leave.	
+3047	r3-good	good	I can't go, and I won't try.	
+3048	r3-good	good	He will to the end, and her will to live was strong.	
+3049	r3-good	good	The will to win drove him.	
+3050	r3-good	good	Her will was read aloud.	
+3051	r3-good	good	Her can of soda fizzed.	
+3052	r3-good	good	Her love for him was real, and her saw was rusty.	
+3053	r3-good	good	Him? He's gone. Them? They left.	
+3054	r3-good	good	Me, I'd rather stay.	
+3055	r3-good	good	Me and my big mouth, always talking.	
+3057	r3-good	good	My brother and I were there.	
+3058	r3-good	good	John and I are friends, and he and she are too.	
+3059	r3-good	good	Tom and Jerry is a cartoon.	
+3060	r3-good	good	She gave me the keys and handed him the bag.	
+3061	r3-good	good	I gave her the keys, and she gave them the map.	
+3062	r3-good	good	They sent us a letter.	
+3063	r3-good	good	Between you and me, it was fine.	
+3064	r3-good	good	He talked to her, and she talked to him.	
+3065	r3-good	good	It's for them and for us.	
+3066	r3-good	good	I agree with them, and they agree with me.	
+3067	r3-good	good	She looked at him, and he looked at her.	
+3068	r3-good	good	The principal reason was money, and his principles were firm.	
+3069	r3-good	good	The principal of the school spoke.	
+3071	r3-good	good	She ran past the house and walked past the gate.	
+3072	r3-good	good	They went past the old mill.	
+3073	r3-good	good	He passed the guard and passed through the door.	
+3074	r3-good	good	She threw the ball through the window.	
+3075	r3-good	good	He walked through the hall and ran through the rain.	
+3076	r3-good	good	He threw the door open.	
+3077	r3-good	good	I want to buy a new coat.	
+3078	r3-good	good	She heard a noise, and the herd moved on.	
+3079	r3-good	good	He is going to meet him, and she wants to meet her.	
+3080	r3-good	good	He led the team, and she leads the choir.	
+3081	r3-good	good	They lead the way.	
+3082	r3-good	good	Every day I walk to school, and everyday life goes on.	
+3083	r3-good	good	She is a criterion for judging, and the criteria were clear.	
+3084	r3-good	good	The woman whom he loved left.	
+3085	r3-good	good	The man to whom she spoke nodded.	
+3086	r3-good	good	He is the one who called me.	
+3087	r3-good	good	The man who called me left.	
+3088	r3-good	good	The man, which surprised everyone, left.	
+3089	r3-good	good	The group which met on Tuesday adjourned.	
+3090	r3-good	good	Whom did you see? To whom did you speak?	
+3091	r3-good	good	The list of items was long.	
+3092	r3-good	good	The box of chocolates was empty.	
+3093	r3-good	good	The number of people who came was small.	
+3094	r3-good	good	Neither of them was ready.	
+3095	r3-good	good	Neither of the options is good.	
+3096	r3-good	good	One of my friends is coming.	
+3097	r3-good	good	One of the men who are here is lost.	
+3098	r3-good	good	Each and every one of them is here.	
+3099	r3-good	good	The reason is that he was late.	
+3100	r3-good	good	She returned home, and they joined hands.	
+3102	r3-good	good	She took a break, and he hit the brakes.	
+3103	r3-good	good	The wind blew hard.	
+3104	r3-good	good	Take a break; you'll need it.	
+3105	r3-good	good	You're the best, and you're going to win.	
+3106	r3-good	good	Your turn comes soon, and your lead is safe.	
+3107	r3-good	good	Your name is on the list.	
+3108	r3-good	good	You're welcome, and you're right.	
+3109	r3-good	good	You're friends now, and you're family.	
+3110	r3-good	good	You're way too late.	
+3111	r3-good	good	It's mine, and it's yours.	
+3112	r3-good	good	On Monday I will go. In July we leave. Christmas is near.	
+3113	r3-good	good	However, I disagree. However much he tried, he failed.	
+3114	r3-good	good	However hard it was, he finished.	
+3115	r3-good	good	Hello there. My name is Tom.	
+3116	r3-good	good	She said hello.  He waved.	
+3117	r3-good	good	He stopped... and looked.	
+3118	r3-good	good	Well... I don't know.	
+3119	r3-good	good	The U.S.A. is large, and e.g. Texas is big.	
+3120	r3-good	good	Visit www.example.com for details.	
+3121	r3-good	good	He said it at 5 p.m. Then he left.	
+3122	r3-good	good	Mr. Smith arrived. Dr. Jones followed.	
+3123	r3-good	good	Wait! Why did you go?	
+3124	r3-good	good	What?! No way.	
+3125	r3-good	good	He asked, "Why?" and left.	
+3126	r3-good	good	"Wait," she said. "Wait!"	
+3127	r3-good	good	I wish I were taller.	
+3128	r3-good	good	A number of problems exist, and a number of them are serious.	
+3129	r3-good	good	The data show the trend.	
+3130	r3-good	good	The police are here, and the news is bad.	
+3131	r3-good	good	Mathematics is hard, and physics is harder.	
+3132	r3-good	good	The jeans fit well, and the scissors are sharp.	
+3133	r3-good	good	The news looks bad today.	
+3134	r3-good	good	The headquarters works late.	
+3135	r3-good	good	Do you want some tea? Does he like pizza?	
+3136	r3-good	good	He can swim well, and she must go now.	
+3137	r3-good	good	They can't come, and he couldn't care less.	
+3138	r3-good	good	She does not go there, and they do not like it.	
+3139	r3-good	good	Did she call you? Did he go?	
+3141	r3-good	good	I need some advice and a piece of information.	
+3142	r3-good	good	Some furniture arrived, and the equipment is old.	
+3143	r3-good	good	It rained all night.	
+3144	r3-good	good	The rain poured, the wind howled, and the old house groaned.	
+3145	r3-good	good	Their going was sudden, and their leaving was sadder.	
+3146	r3-good	good	They live there, and we live here.	
+3147	r3-good	good	Stay there, and I'll be right back.	
+3148	r3-good	good	They looked there, then there again.	
+3149	r3-good	good	He was too tired to continue.	
+3150	r3-good	good	She came home, to tired arms and a warm bed.	
+3151	r3-good	good	I like to read, and to write, and to think.	
+3152	r3-good	good	He wanted to be tall, to be strong, to be free.	
+3153	r3-good	good	She gave it to him and to her.	
+3154	r3-good	good	He was the first to arrive and the last to go.	
+3155	r3-good	good	There are three ways to go: to the left, to the right, or straight on.	
+4000	r4	bad	The pile of letters were scattered on the desk.	
+4001	r4	bad	Neither of the guards were awake.	
+4002	r4	bad	The horses gallops across the field.	
+4003	r4	bad	Her sisters laughs at everything he says.	
+4004	r4	bad	My mother and I was at the window when it happened.	
+4005	r4	bad	The girl who work at the bakery knows him.	
+4006	r4	bad	Last week we go to the lake and swim all day.	
+4007	r4	bad	Two days ago he come home late.	
+4008	r4	bad	He done his homework and went out.	
+4009	r4	bad	I sung that song at the wedding last year.	
+4010	r4	bad	Him and her went to the dance together.	
+4011	r4	bad	Them were the best days of my life.	
+4012	r4	bad	Me and Sarah goes to the gym every morning.	
+4013	r4	bad	She handed he the letter without a word.	
+4014	r4	bad	They agreed with she completely.	
+4015	r4	bad	The effects are clear, but you're decision is final.	
+4016	r4	bad	I need to breath, but the smoke is thick.	
+4017	r4	bad	He drove passed the church and kept going.	
+4018	r4	bad	They climbed threw the window quietly.	
+4019	r4	bad	She is going to meat her new neighbor tomorrow.	
+4020	r4	bad	We walked their after dinner.	
+4021	r4	bad	The town was to quiet to be real.	
+4023	r4	bad	He didn't see nobody in the hallway.	
+4024	r4	bad	I can't hardly believe it's already over.	
+4025	r4	bad	She said nothing and she don't care.	
+4026	r4	bad	I am knowing the answer now.	
+4027	r4	bad	What he doing in my house?	
+4028	r4	bad	They going to the market tomorrow.	
+4029	r4	bad	He can runs faster than anyone here.	
+4030	r4	bad	She does not likes the cold weather.	
+4031	r4	bad	I am agree with every word you said.	
+4032	r4	bad	He made them to leave early.	
+4033	r4	bad	They talked about of the old days.	
+4034	r4	bad	He is good at to paint.	
+4035	r4	bad	She entered into the dark kitchen slowly.	
+4036	r4	bad	It was a beautiful day.He smiled.	
+4037	r4	bad	He walked  into the room and sat down.	
+4038	r4	bad	However he refused to leave.	
+4039	r4	bad	We visited paris last july and loved it.	
+5000	r4-good	good	My teacher told us to not worry, and we split the infinitive without a care.	
