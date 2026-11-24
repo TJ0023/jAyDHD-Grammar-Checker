@@ -2,6 +2,10 @@
 
 A small personal writing helper for Windows, written in Rust.
 
+## Demo
+
+https://github.com/user-attachments/assets/eae5362c-8d86-49e9-8bb9-044048ec4950
+
 It started out as a simple **word counter**, then more features were added just for fun.
 It does have a grammar checker, but it's **not a robust one**. Think of this as a personal
 side project, not a replacement for tools like Grammarly or Word's spell check.
