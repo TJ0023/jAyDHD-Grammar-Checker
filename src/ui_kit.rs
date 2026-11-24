@@ -136,6 +136,49 @@ pub fn chip(ui: &mut Ui, s: &Settings, fill: Color32, text: String) {
         });
 }
 
+/// The issue's title in a yellow box with a painted "!" so it stands out from the explanation
+/// below it. Used by the Grammar Checker and Dialogue Formatting boxes. The text is always dark,
+/// whatever box text colour is chosen, so it stays readable on the yellow.
+pub fn issue_banner(ui: &mut Ui, s: &Settings, title: &str) {
+    Frame::new()
+        .fill(Color32::from_rgb(255, 236, 153))
+        .stroke(Stroke::new(1.0, Color32::from_rgb(225, 180, 40)))
+        .corner_radius(CornerRadius::same(s.corner_radius.min(8)))
+        .inner_margin(Margin::symmetric(8, 5))
+        .show(ui, |ui| {
+            ui.set_width(ui.available_width());
+            ui.horizontal(|ui| {
+                // The "!" badge: an amber circle with a white bar and dot (painted, not a font
+                // symbol, so it looks the same on every system).
+                let d = (s.box_font_size + 4.0).max(16.0);
+                let (rect, _) = ui.allocate_exact_size(egui::vec2(d, d), egui::Sense::hover());
+                let p = ui.painter();
+                let c = rect.center();
+                p.circle_filled(c, d / 2.0, Color32::from_rgb(230, 150, 0));
+                let w = (d * 0.14).max(2.0);
+                p.rect_filled(
+                    egui::Rect::from_center_size(
+                        c + egui::vec2(0.0, -d * 0.09),
+                        egui::vec2(w, d * 0.40),
+                    ),
+                    CornerRadius::same(1),
+                    Color32::WHITE,
+                );
+                p.circle_filled(c + egui::vec2(0.0, d * 0.25), w * 0.62, Color32::WHITE);
+                ui.add_space(2.0);
+                ui.add(
+                    egui::Label::new(
+                        RichText::new(title)
+                            .strong()
+                            .size(s.box_font_size)
+                            .color(Color32::from_gray(35)),
+                    )
+                    .wrap(),
+                );
+            });
+        });
+}
+
 /// A small coloured label such as "Synonyms" or "Noun".
 pub fn tag(ui: &mut Ui, size: f32, fill: Color32, text: &str) {
     Frame::new()

@@ -126,6 +126,10 @@ pub struct App {
     watch: Option<TextSource>,
     watching: String,
     selected: String,
+    /// How the last Apply Change in another program went, and when a success note is cleared
+    /// (egui time, seconds).
+    apply_note: String,
+    apply_note_clear_at: Option<f64>,
 
     // The Thesaurus box: the word being looked up, what was found, and which meaning shows.
     thes_query: String,
@@ -153,6 +157,65 @@ pub struct App {
     docs_link: String,
     /// The tray icon.
     tray: Option<crate::tray::Tray>,
+}
+
+/// What Apply Change looks for in the other program: which match of the flagged text (counting
+/// from 0), the text itself, and what replaces it. A fix that only adds text (nothing flagged
+/// to replace) takes in the few characters before it, or after it at the start of a line, so
+/// there is something to find. `None` when there is nothing to find on the line.
+fn edit_target(
+    text: &str,
+    range: std::ops::Range<usize>,
+    new: &str,
+) -> Option<(usize, String, String, String, String)> {
+    const CONTEXT: usize = 12;
+    let (mut start, mut end) = (range.start, range.end);
+    if text.get(start..end)?.is_empty() {
+        let line_start = text[..start].rfind('\n').map_or(0, |i| i + 1);
+        start = text[line_start..start]
+            .char_indices()
+            .rev()
+            .take(CONTEXT)
+            .last()
+            .map_or(start, |(i, _)| line_start + i);
+        if start == range.start {
+            let line_end = text[end..].find('\n').map_or(text.len(), |i| end + i);
+            end = text[end..line_end]
+                .char_indices()
+                .nth(CONTEXT)
+                .map_or(line_end, |(i, _)| end + i);
+        }
+    }
+    let old = text.get(start..end)?;
+    if old.is_empty() || old.contains('\n') {
+        return None;
+    }
+    let occurrence = text.match_indices(old).position(|(i, _)| i == start)?;
+    let replacement = format!("{}{}{}", &text[start..range.start], new, &text[range.end..end]);
+    // A little of the line on each side, so the spot can be found again if the text shifts.
+    let line_start = text[..start].rfind('\n').map_or(0, |i| i + 1);
+    let line_end = text[end..].find('\n').map_or(text.len(), |i| end + i);
+    let before: String = text[line_start..start]
+        .chars()
+        .rev()
+        .take(20)
+        .collect::<Vec<_>>()
+        .into_iter()
+        .rev()
+        .collect();
+    let after: String = text[end..line_end].chars().take(20).collect();
+    Some((occurrence, old.to_string(), replacement, before, after))
+}
+
+/// When a fix cannot be made in the other program: put it on the clipboard and say so.
+fn copy_fallback(reason: &str, new: &str) -> String {
+    if new.is_empty() {
+        format!("{reason} Select the flagged text and delete it.")
+    } else if crate::capture::copy_text(new) {
+        format!("{reason} Copied \u{201C}{new}\u{201D}: select the flagged text and press Ctrl+V.")
+    } else {
+        format!("{reason} Could not copy the fix to the clipboard either.")
+    }
 }
 
 fn hash_of(text: &str) -> u64 {
@@ -227,6 +290,8 @@ impl App {
             watch,
             watching: String::new(),
             selected: String::new(),
+            apply_note: String::new(),
+            apply_note_clear_at: None,
             thes_query: String::new(),
             thes_seen: String::new(),
             thes_for: String::new(),
@@ -527,9 +592,26 @@ impl App {
                     };
                     return;
                 }
-                if self.watch.is_some() {
-                    self.status =
-                        "Applying changes to other windows comes in the next step.".to_string();
+                if let Some(watch) = &self.watch {
+                    // Make the fix in the program you are typing in (Word, Notepad, a web text box).
+                    let sent = edit_target(&self.text, range, &new).is_some_and(
+                        |(occurrence, old, new, before, after)| {
+                            watch.replace(crate::source::Replace {
+                                expected: self.text.clone(),
+                                occurrence,
+                                old,
+                                new,
+                                before,
+                                after,
+                            })
+                        },
+                    );
+                    self.apply_note_clear_at = None;
+                    self.apply_note = if sent {
+                        "Applying the fix\u{2026}".to_string()
+                    } else {
+                        copy_fallback("This fix cannot be applied from here.", &new)
+                    };
                     return;
                 }
                 if self.text.get(range.clone()).is_some() {
@@ -693,11 +775,26 @@ impl App {
     }
 
     /// Take the newest snapshot from the watcher, if there is one, as the text to check.
-    fn poll_watch(&mut self) {
+    fn poll_watch(&mut self, now: f64) {
         let Some(watch) = &self.watch else { return };
         let mut latest = None;
         while let Ok(snapshot) = watch.rx.try_recv() {
             latest = Some(snapshot);
+        }
+        // How the last Apply Change went. When it could not be made, the fix goes to the
+        // clipboard instead, so it is never lost.
+        while let Ok(done) = watch.applied.try_recv() {
+            // "Fixed." goes away after 3 seconds; a problem stays until the next Apply Change.
+            self.apply_note_clear_at = (done.ok && done.message == "Fixed.").then_some(now + 3.0);
+            self.apply_note = if done.ok {
+                done.message
+            } else {
+                copy_fallback(&done.message, &done.new)
+            };
+        }
+        if self.apply_note_clear_at.is_some_and(|at| now >= at) {
+            self.apply_note.clear();
+            self.apply_note_clear_at = None;
         }
         if let Some(snapshot) = latest {
             // After a hotkey capture the browser's own text boxes (address bar, search) would
@@ -736,6 +833,7 @@ impl App {
         let cur = vis.get(self.current).map(|&i| self.flags[i].clone());
         let current = self.current;
         let nothing_loaded = self.nothing_loaded();
+        let apply_note = self.apply_note.clone();
         let mut action = None;
         let mut ignore = None;
         let mut step = 0isize;
@@ -780,12 +878,7 @@ impl App {
                 ui.vertical_centered(|ui| {
                     ui_kit::chip(ui, s, Color32::from_gray(225), f.shown.clone())
                 });
-                ui.label(
-                    RichText::new(format!("Issue: {}", f.issue.title))
-                        .strong()
-                        .size(s.box_font_size)
-                        .color(text_color),
-                );
+                ui_kit::issue_banner(ui, s, &format!("Issue: {}", f.issue.title));
                 ui.label(
                     RichText::new(&f.issue.explanation)
                         .size(s.box_font_size - 1.0)
@@ -808,6 +901,13 @@ impl App {
                         }
                     });
                 });
+                if !apply_note.is_empty() {
+                    ui.label(
+                        RichText::new(&apply_note)
+                            .size(s.box_font_size - 2.0)
+                            .color(text_color),
+                    );
+                }
                 // Stepping through the issues sits alone, centred at the bottom, away from the
                 // buttons above so it is not pressed by mistake.
                 if total > 1 {
@@ -903,6 +1003,7 @@ impl App {
         let current = self.dialogue_current;
         let style_label = self.style().label().to_lowercase();
         let nothing_loaded = self.nothing_loaded();
+        let apply_note = self.apply_note.clone();
         let mut choice = s.dialogue_style;
         let mut action = None;
         let mut guide: Option<&'static str> = None;
@@ -988,12 +1089,7 @@ impl App {
                         }
                     });
                 });
-                ui.label(
-                    RichText::new(format!("Issue: {}", f.issue.title))
-                        .strong()
-                        .size(s.box_font_size)
-                        .color(text_color),
-                );
+                ui_kit::issue_banner(ui, s, &format!("Issue: {}", f.issue.title));
                 ui.label(
                     RichText::new(&f.issue.explanation)
                         .size(s.box_font_size - 1.0)
@@ -1073,6 +1169,13 @@ impl App {
                         }
                     });
                 });
+                if !apply_note.is_empty() {
+                    ui.label(
+                        RichText::new(&apply_note)
+                            .size(s.box_font_size - 2.0)
+                            .color(text_color),
+                    );
+                }
                 if total > 1 {
                     step = ui_kit::stepper(ui, text_color, current, total);
                 }
@@ -1735,6 +1838,9 @@ impl App {
                         self.watching.clone()
                     };
                     ui.label(RichText::new(line).weak().small());
+                    if !self.apply_note.is_empty() {
+                        ui.label(RichText::new(&self.apply_note).small());
+                    }
                     if !self.selected.is_empty() {
                         let word: String = self.selected.chars().take(60).collect();
                         ui.label(RichText::new(format!("Selected: {word:?}")).small());
@@ -2269,7 +2375,7 @@ impl eframe::App for App {
         self.poll_input();
         self.poll_docs();
         self.poll_capture();
-        self.poll_watch();
+        self.poll_watch(now);
         self.poll_tray(ctx);
         let typed = self.analysed.as_ref().is_some_and(|(t, _)| *t != self.text);
         self.refresh(now);

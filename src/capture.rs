@@ -165,6 +165,90 @@ fn chord(keys: &[(u16, bool)]) {
     }
 }
 
+/// The window in front and the process it belongs to.
+#[cfg(windows)]
+pub fn foreground_window() -> (isize, u32) {
+    let mut pid = 0u32;
+    // SAFETY: `pid` outlives the call.
+    let hwnd = unsafe {
+        let hwnd = ffi::GetForegroundWindow();
+        ffi::GetWindowThreadProcessId(hwnd, &mut pid);
+        hwnd
+    };
+    (hwnd, pid)
+}
+
+/// Put a window in front so the keys typed next go to it.
+#[cfg(windows)]
+pub fn bring_to_front(hwnd: isize) -> bool {
+    // SAFETY: a plain call; a stale handle only makes it fail.
+    unsafe { ffi::SetForegroundWindow(hwnd) != 0 }
+}
+
+/// Press Delete in the window in front (removes the selected text).
+#[cfg(windows)]
+pub fn press_delete() {
+    const VK_DELETE: u16 = 0x2E;
+    chord(&[(VK_DELETE, true)]);
+}
+
+/// Keys Apply Change uses to move the cursor and remove characters.
+#[cfg(windows)]
+#[derive(Clone, Copy)]
+pub enum EditKey {
+    Left,
+    Right,
+    Backspace,
+    Delete,
+}
+
+/// Press one key `times` times in the window in front, sent in batches so long moves are quick
+/// (a few hundred presses take well under a second).
+#[cfg(windows)]
+pub fn press_key(key: EditKey, times: usize) {
+    use std::{thread::sleep, time::Duration};
+    const KEYEVENTF_EXTENDEDKEY: u32 = 0x0001;
+    const KEYEVENTF_KEYUP: u32 = 0x0002;
+    let (vk, extended) = match key {
+        EditKey::Left => (0x25u16, true),
+        EditKey::Right => (0x27, true),
+        EditKey::Backspace => (0x08, false),
+        EditKey::Delete => (0x2E, true),
+    };
+    let ext = if extended { KEYEVENTF_EXTENDEDKEY } else { 0 };
+    let mut left = times;
+    while left > 0 {
+        let n = left.min(100);
+        left -= n;
+        let mut inputs = Vec::with_capacity(n * 2);
+        for _ in 0..n {
+            for flags in [ext, ext | KEYEVENTF_KEYUP] {
+                inputs.push(ffi::Input {
+                    kind: 1, // INPUT_KEYBOARD
+                    ki: ffi::KeybdInput {
+                        vk,
+                        scan: 0,
+                        flags,
+                        time: 0,
+                        extra: 0,
+                    },
+                    _union_tail: [0; 8],
+                });
+            }
+        }
+        // SAFETY: `inputs` is a valid array of INPUTs for the whole call.
+        unsafe {
+            ffi::SendInput(
+                inputs.len() as u32,
+                inputs.as_ptr(),
+                std::mem::size_of::<ffi::Input>() as i32,
+            );
+        }
+        // Let the program catch up before the next batch.
+        sleep(Duration::from_millis(40));
+    }
+}
+
 #[cfg(windows)]
 fn is_down(vk: u16) -> bool {
     // SAFETY: plain query of a key's state.
@@ -386,7 +470,7 @@ pub fn selection_now() -> Option<String> {
 
 /// Type text into the window you are in, one UTF-16 unit at a time (any character works).
 #[cfg(windows)]
-fn type_text(text: &str) {
+pub fn type_text(text: &str) {
     use std::{thread::sleep, time::Duration};
     for unit in text.encode_utf16() {
         for up in [false, true] {
